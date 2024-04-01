@@ -1,0 +1,34 @@
+<mat-card>
+    <mat-card-title>Novo Produto</mat-card-title>
+    <form [formGroup]="productForm" (submit)="createProduct()"
+        #formDir="ngForm">
+
+        <mat-form-field>
+            <input matInput placeholder="Nome" formControlName="name" name="name">
+            <div *ngIf="name.invalid && formDir.submitted" class="v-error">
+                <p *ngIf="name.errors?.['required']">Nome do produto é
+                    obrigatório.</p>
+            </div>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Preco (R$)" type="number" name="price"
+                formControlName="price">
+            <div *ngIf="price.invalid && formDir.submitted" class="v-error">
+                <p *ngIf="price.errors?.['required']">Preço do produto é
+                    obrigatório.</p>
+            </div>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">
+            Salvar
+        </button>
+        <button mat-raised-button (click)="cancel()" color="warn">
+            Cancelar
+        </button>
+    </form>
+</mat-card>
+
+
+
+
+
