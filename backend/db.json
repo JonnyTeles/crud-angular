@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "Notebook Acer Nitro 5",
+      "price": 6800
+    },
+    {
+      "name": "Capivara Miniatura",
+      "price": 350,
+      "id": 5
+    },
+    {
+      "name": "JBL ",
+      "price": 180,
+      "id": 6
+    },
+    {
+      "name": "Rádio",
+      "price": 39,
+      "id": 7
+    }
+  ]
+}
